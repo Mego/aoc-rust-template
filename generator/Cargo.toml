@@ -1,0 +1,13 @@
+[package]
+name = "generator"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+cargo_metadata = "0.23.1"
+chrono = "0.4.42"
+clap = { version = "4.5.53", features = ["derive"] }
+itertools = "0.14.0"
+parking_lot = "0.12.5"
+rustc-hash = "2.1.1"
+upon = { version = "0.10.0" }

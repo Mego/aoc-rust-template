@@ -1,0 +1,13 @@
+{% for day in days %}
+pub mod {{ day | day_fmt }};
+{% endfor %}
+
+pub const fn day_part_fn(day: u8, level: u8) -> impl Fn(&str) -> String {
+    match (day, level) {
+        {% for day in days %}
+        ({{ day }}, 1) => |input: &str| ({{ day | day_fmt }}::part1)(input).to_string(),
+        ({{ day }}, 2) => |input: &str| ({{ day | day_fmt }}::part2)(input).to_string(),
+        {% endfor %}
+        _ => unimplemented!(),
+    }
+}

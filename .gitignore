@@ -1,0 +1,8 @@
+/target
+/inputs
+/solutions
+cookie.txt
+*.svg
+perf.data*
+.vscode/
+aoc*/
