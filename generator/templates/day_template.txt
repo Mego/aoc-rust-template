@@ -2,8 +2,12 @@ pub fn part1(input: &str) -> impl ToString {
     todo!()
 }
 
-pub fn part2(input: &str) -> impl ToString {
+pub fn part2({%if final_day %}_{% endif %}input: &str) -> impl ToString {
+    {% if final_day %}
+    "free"
+    {% else %}
     todo!()
+    {% endif %}
 }
 
 #[cfg(test)]
