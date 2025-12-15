@@ -122,7 +122,8 @@ fn generate_days(year: u16) {
             .unwrap()
             .render(upon::value! {
                 day: day,
-                year: year
+                year: year,
+                final_day: day == max_day
             })
             .to_writer(&mut day_file)
             .unwrap();

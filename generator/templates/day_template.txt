@@ -27,8 +27,10 @@ mod test {
         assert!(check(YEAR, DAY, 1, &part1(&INPUT).to_string()).unwrap());
     }
 
+    {% if not final_day %}
     #[test]
     fn test_part2() {
         assert!(check(YEAR, DAY, 2, &part2(&INPUT).to_string()).unwrap());
     }
+    {% endif %}
 }
