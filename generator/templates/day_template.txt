@@ -13,18 +13,13 @@ pub fn part2({%if final_day %}_{% endif %}input: &str) -> impl ToString {
 #[cfg(test)]
 mod test {
     use super::*;
-    use std::{fs, path::Path, sync::LazyLock};
+    use std::{fs, sync::LazyLock};
     use util::check;
 
     const YEAR: u16 = {{ year }};
     const DAY: u8 = {{ day }};
-    static INPUT: LazyLock<String> = LazyLock::new(|| {
-        fs::read_to_string(
-            Path::new("inputs")
-                .join("{{ year }}")
-                .join("day{{ day }}.txt")
-        ).unwrap()
-    });
+    static INPUT: LazyLock<String> =
+        LazyLock::new(|| fs::read_to_string(util::input_path(YEAR, DAY)).unwrap());
 
     #[test]
     fn test_part1() {
