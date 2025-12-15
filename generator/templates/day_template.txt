@@ -22,12 +22,14 @@ mod test {
         LazyLock::new(|| fs::read_to_string(util::input_path(YEAR, DAY)).unwrap());
 
     #[test]
+    #[ignore = "not yet implemented"]
     fn test_part1() {
         assert!(check(YEAR, DAY, 1, &part1(&INPUT).to_string()).unwrap());
     }
 
     {% if not final_day %}
     #[test]
+    #[ignore = "not yet implemented"]
     fn test_part2() {
         assert!(check(YEAR, DAY, 2, &part2(&INPUT).to_string()).unwrap());
     }
